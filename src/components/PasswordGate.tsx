@@ -37,12 +37,15 @@ export default function PasswordGate({ children }: PasswordGateProps) {
     return (
       <>
         {children}
-        <div className="fixed bottom-0 left-0 right-0 z-50 group">
-          <div className="bg-red-600 text-white text-xs text-center py-1.5 font-medium cursor-default">
-            Ambiente di sviluppo
-          </div>
-          <div className="hidden group-hover:block bg-red-700 text-white text-xs text-center py-2 px-4">
-            L'accesso verra ripristinato alla chiusura della pagina
+        <div className="fixed bottom-0 left-0 right-0 z-50">
+          <div className="bg-red-600 text-white text-xs text-center py-1.5 font-medium flex items-center justify-center gap-4">
+            <span>Ambiente di sviluppo</span>
+            <button
+              onClick={() => { sessionStorage.removeItem("fpsmart_auth"); window.location.reload(); }}
+              className="bg-white/20 hover:bg-white/30 text-white text-[10px] font-semibold px-2 py-0.5 rounded"
+            >
+              Esci
+            </button>
           </div>
         </div>
       </>

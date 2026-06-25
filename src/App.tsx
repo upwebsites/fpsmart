@@ -24,18 +24,7 @@ function WhatsAppButton() {
   );
 }
 
-function DevBanner() {
-  return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 group cursor-default">
-      <div className="bg-red-600 text-white text-xs text-center py-1 font-medium">
-        Ambiente di sviluppo
-      </div>
-      <div className="hidden group-hover:block bg-red-700 text-white text-xs text-center py-2 px-4">
-        L'accesso verra ripristinato alla chiusura della pagina
-      </div>
-    </div>
-  );
-}
+
 
 export default function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -55,7 +44,6 @@ export default function App() {
           <Footer />
           <CartSidebar isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
           <WhatsAppButton />
-          <DevBanner />
         </div>
       </Router>
     </PasswordGate>
