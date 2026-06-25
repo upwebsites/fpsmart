@@ -1,0 +1,6 @@
+{
+  "name": "FPSMART",
+  "description": "Wholesale Tech Solutions - Elettrodomestici smart e televisori premium di ultima generazione.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
